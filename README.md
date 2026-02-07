@@ -1,5 +1,32 @@
 # HIRALL POS v1 MVP Specification
 
+## Workspace Services
+
+- `apps/web`: Next.js frontend shell for the HIRALL POS operator UI.
+- `services/api-node`: Node.js (Express) API for app endpoints.
+- `services/api-python`: Python (FastAPI) service for back-office or data workloads.
+
+### Local development
+
+```bash
+# Next.js (frontend)
+cd apps/web
+npm install
+npm run dev
+
+# Node.js API
+cd services/api-node
+npm install
+npm run dev
+
+# Python API
+cd services/api-python
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 5000
+```
+
 Locked Phase 1 scope for Food + Retail.
 
 ## 0) System-wide MVP Rules (Non-negotiables)
