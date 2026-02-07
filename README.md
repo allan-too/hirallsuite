@@ -27,6 +27,12 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 5000
 ```
 
+### Local-first workflow (database later)
+
+- The Node.js API persists data to `services/api-node/data/db.json` for local-only MVP use.
+- Sync-ready change logs are available via `GET /sync/changes` and `POST /sync/push`.
+- Default manager credentials: user `user-admin`, PIN `1234`.
+
 Locked Phase 1 scope for Food + Retail.
 
 ## 0) System-wide MVP Rules (Non-negotiables)
